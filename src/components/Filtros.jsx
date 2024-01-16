@@ -3,7 +3,7 @@ export default function Filtros({ setFiltro ,filtro}) {
     <div className="filtros sombra contenedor">
       <form>
         <div className="campo">
-          <label>Filtrar gastos</label>
+          <label>Filtrar por categoria</label>
           <select
             value={filtro}
             onChange={(e) => {
