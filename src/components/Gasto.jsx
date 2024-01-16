@@ -54,7 +54,7 @@ function Gasto({ gasto,setGastoEditar,eliminarGasto }) {
               <p className="categoria">{categoria}</p>
               <p className="nombre-gasto">{nombre}</p>
               <p className="fecha-gasto">
-                Agregando el: {""}
+                Agregado el: {""}
                 <span>{formatearFecha(fecha)}</span>
               </p>
             </div>
