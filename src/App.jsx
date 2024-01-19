@@ -19,10 +19,10 @@ function App() {
       : []
   );
 
-  const [gastoEditar, setGastoEditar] = useState({});
+  const [gastoEditar, setGastoEditar] = useState(null);
 
   useEffect(() => {
-    if (Object.keys(gastoEditar).length) {
+    if (gastoEditar) {
       handleNuevoGasto();
     }
   }, [gastoEditar]);

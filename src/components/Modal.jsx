@@ -19,7 +19,7 @@ function Modal({
   const [key, setKey] = useState("");
 
   useEffect(() => {
-    if (Object.keys(gastoEditar).length) {
+    if (gastoEditar) {
       setNombre(gastoEditar.nombre);
       setCantidad(gastoEditar.cantidad);
       setCategoria(gastoEditar.categoria);
@@ -42,13 +42,13 @@ function Modal({
       return;
     }
 
-    if (Object.keys(gastoEditar).length) {
+    if (gastoEditar) {
       const newGasto = { nombre, cantidad, categoria, key };
       const newGastos = gastos.map((g) =>
         g.key == newGasto.key ? { ...newGasto, fecha: g.fecha } : g
       );
       setGastos(newGastos);
-      setGastoEditar({});
+      setGastoEditar(null);
     } else {
       setGastos([
         ...gastos,
@@ -114,7 +114,7 @@ function Modal({
 
         <input
           type="submit"
-          value={`${Object.keys(gastoEditar).length ? "Editar" : "Añadir"} gasto`}
+          value={`${gastoEditar ? "Editar" : "Añadir"} gasto`}
         />
       </form>
     </div>
