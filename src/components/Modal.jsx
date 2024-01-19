@@ -112,7 +112,10 @@ function Modal({
 
         <input type="hidden" value={key} />
 
-        <input type="submit" value="Añadir gasto" />
+        <input
+          type="submit"
+          value={`${Object.keys(gastoEditar).length ? "Editar" : "Añadir"} gasto`}
+        />
       </form>
     </div>
   );
