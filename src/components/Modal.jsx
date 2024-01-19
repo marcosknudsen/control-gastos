@@ -31,6 +31,7 @@ function Modal({
     setAnimarModal(false);
     setTimeout(() => {
       setModal(false);
+      setGastoEditar(null);
     }, 500);
   };
 
@@ -48,7 +49,6 @@ function Modal({
         g.key == newGasto.key ? { ...newGasto, fecha: g.fecha } : g
       );
       setGastos(newGastos);
-      setGastoEditar(null);
     } else {
       setGastos([
         ...gastos,
